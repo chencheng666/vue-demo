@@ -10,3 +10,5 @@ my first vue demo
 >请使用6以上的node版本 nvm use 8
 
 2、npm run dev
+
+3、地址 http://localhost:8080
