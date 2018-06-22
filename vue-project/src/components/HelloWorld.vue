@@ -6,7 +6,7 @@
     <router-link to="secondDemo" tag='li'>goto second</router-link>
     <router-link :to="{name: 'FirstDemo', params: {param1:1}}" tag='div' replace>goto second with parmas</router-link>
     <router-link to="multiDemo" tag='div'>goto multi</router-link>
-    
+    <router-link to="studyDemo" tag='div'>开始学习js、css</router-link>
   </div>
 </template>
 

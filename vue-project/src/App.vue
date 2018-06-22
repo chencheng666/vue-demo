@@ -1,7 +1,16 @@
 <template>
   <div id="app">
-    <router-view/>
-    <router-view name="sss"/>
+    <keep-alive>
+      <!-- <div v-if="$route.meta.keepAlive"> -->
+        <!-- {{$route.meta.keepAlive}} -->
+        <router-view  v-if="$route.meta.keepAlive"/>
+        <!-- <router-view name="sss"/> -->
+      <!-- </div> -->
+    </keep-alive>
+    <!-- <div v-if="!$route.meta.keepAlive"> -->
+      <router-view v-if="!$route.meta.keepAlive"/>
+      <!-- <router-view name="sss"/> -->
+    <!-- </div> -->
   </div>
 </template>
 
@@ -19,5 +28,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+}
+input {
+  border:1px solid #e7e7e7;
 }
 </style>

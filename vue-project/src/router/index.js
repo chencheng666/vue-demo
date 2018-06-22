@@ -6,6 +6,9 @@ import FirstDemo from '@/components/firstDemo'
 // 第二个路由组件
 import SecondDemo from '@/components/secondDemo'
 
+// 学习js、css的检验demo
+import studyDemo from '@/components/studyDemo'
+
 Vue.use(Router)
 
 export default new Router({
@@ -19,7 +22,10 @@ export default new Router({
     {
       name: 'FirstDemo',
       path: '/firstDemo/:param1', // 动态路由
-      component: FirstDemo
+      component: resolve => require(['@/components/firstDemo'], resolve),//懒加载,
+      meta: {
+        keepAlive: true
+      }
     },
     // {
     //   name: '',
@@ -39,9 +45,11 @@ export default new Router({
         default: FirstDemo,
         sss: SecondDemo
       }
-    }
-
-
-
+	},
+	{
+		name: 'studyDemo',
+		path: '/studyDemo',
+		component: studyDemo
+	}
   ]
 })

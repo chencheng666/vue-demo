@@ -6,6 +6,7 @@
         <slot name="slot-second">slot second</slot>
         <slot name="slot-third">slot third</slot>
         <div v-for="(item, index) in data" :key="index">{{item.name}}</div>
+        <input type="text">
     </div>
 </template>
 

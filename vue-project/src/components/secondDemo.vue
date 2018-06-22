@@ -2,7 +2,8 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <router-link :to="{ path: 'relative/path'}" append>append</router-link>
-
+    <p>测试keepalive</p>
+    <input type="text" name="" id="">
     <!-- 第一个全局指令 -->
     <div>一个全局指令，v-img加载网络图片作为背景</div>
     <div v-img="item.url" v-for="(item, index) in imgList" :key="index"></div>
