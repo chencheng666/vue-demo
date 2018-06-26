@@ -13,65 +13,109 @@
       <span class="ao"></span>
       <span class="tu"></span>
     </div>
+    <div class="container-test">
+      <!-- <span class="test-padding">133</span> -->
+      <!-- <i class='icon-menu'></i>
+      <i class='icon-dot'></i> -->
+      <div class="father">
+        <div class="son">son</div>
+        <div class="son">son</div>
+        <div class="son">son</div>
+        <div class="son">son</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      imgSrc: null
-    }
-  },
-  directives: {
-  },
-  methods: {
+  export default {
+    data() {
+      return {
+        imgSrc: null
+      }
+    },
+    directives: {},
+    methods: {
 
-  },
-  created() {
-    this.imgSrc = 'http://file.mumayi.com/forum/201401/16/183515h7dre6zxsiy3hity.jpg';
+    },
+    created() {
+      this.imgSrc = 'http://file.mumayi.com/forum/201401/16/183515h7dre6zxsiy3hity.jpg';
+    }
   }
-}
 </script>
 <!--less引入-->
 <style lang="less" scoped>
-.css-world {
-  .container-block {
-    width: auto;
-    background: rgb(34, 189, 47);
-    padding: 10px;
-    // overflow: auto;  // 清除浮动方法1
-    .test-img {
-      float: left;
-      width: 30%;
-      margin: 10px;
-    }
-    &::after {
-      content: 'after'; // 清除浮动方法2
-      display: block;
-      clear: both;
-    }
-  }
-  .container-inline {
-    .ao {
-      display: inline-block;
-      width: 0px;
+  .css-world {
+    .container-block {
+      width: auto;
+      background: rgb(34, 189, 47);
+      padding: 10px; // overflow: auto;  // 清除浮动方法1
+      .test-img {
+        float: left;
+        width: 30%;
+        margin: 10px;
+      }
       &::after {
-        content: "love 你 love"; 
-        outline: 2px solid #cd0000;
-        color: #fff;
+        content: 'after'; // 清除浮动方法2
+        display: block;
+        clear: both;
       }
     }
-    .tu {
-      display: inline-block;
-      width: 0px;
-      margin-left: 50px;
-      &::after {
-        content: "我 love 你"; 
-        outline: 2px solid #cd0000;
-        color: #fff;
+    .container-inline {
+      .ao {
+        display: inline-block;
+        width: 0px;
+        &::after {
+          content: "love 你 love";
+          outline: 2px solid #cd0000;
+          color: #fff;
+        }
+      }
+      .tu {
+        display: inline-block;
+        width: 0px;
+        margin-left: 50px;
+        &::after {
+          content: "我 love 你";
+          outline: 2px solid #cd0000;
+          color: #fff;
+        }
       }
     }
+    .container-test {
+      margin: 20px;
+      background: #e7e7e7;
+      .test-padding {
+        padding: 10px; // display: inline;
+      }
+      .icon-menu {
+        display: inline-block;
+        width: 140px;
+        height: 10px;
+        padding: 35px 0;
+        border-top: 10px solid;
+        border-bottom: 10px solid;
+        background-color: currentColor;
+        background-clip: content-box;
+      }
+      .icon-dot {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        border: 10px solid;
+        border-radius: 50%;
+        background-color: currentColor;
+        background-clip: content-box;
+      }
+      .father {
+        // height: 100%;
+        // display: inline-block;
+        overflow: hidden;
+        // padding-top: 0px;
+        .son { margin: 20px; } 
+       }
+    }
+
   }
-}
 </style>
