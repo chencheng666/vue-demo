@@ -24,6 +24,24 @@
         <div class="son">son</div>
       </div>
     </div>
+    <p>这两种布局需要在web环境</p>
+    <p>圣杯布局</p>
+    <div class="container-cup">
+      <div id="bd">         
+          <div class="main">mian</div>        
+          <div class="sub">sub</div>        
+          <div class="extra">extra</div>  
+      </div>
+    </div>
+    <p style="clear: both">双飞翼布局</p>
+    <div class="container">
+      <div id="main-wrap" class="column">
+            <div id="main">#main</div>
+      </div>
+      <div class="sub">sub</div>        
+      <div class="extra">extra</div>
+    </div>
+
   </div>
 </template>
 
@@ -116,6 +134,49 @@
         .son { margin: 20px; } 
        }
     }
+    .container-cup {
+      .main {        
+          float: left;       
+          width: 100%;   
+      }  
+      .sub {       
+          float: left;        
+          width: 190px;        
+          margin-left: -100%;               
+          position: relative;  
+          left: -190px;  
+      }   
+      .extra {        
+          float: left;        
+          width: 230px;        
+          margin-left: -230px; 
+          position: relative; 
+          right: -230px;  
+      }
+      #bd {        
+          padding: 0 230px 0 190px;   
+      }
+    }
 
+
+    .container {
+      #main-wrap {        
+          float: left;       
+          width: 100%;   
+      }  
+      .sub {       
+          float: left;        
+          width: 190px;        
+          margin-left: -100%;   
+      }   
+      .extra {        
+          float: left;        
+          width: 230px;        
+          margin-left: -230px; 
+      }
+      #main {    
+          margin: 0 230px 0 190px;
+      }
+    }
   }
 </style>
